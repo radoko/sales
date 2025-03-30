@@ -265,7 +265,13 @@
   display: inline-block;
   margin-top: 10px;
 }
-
+.header-subinfo {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 6px;
+}
 
   </style>
 </head>
@@ -273,8 +279,10 @@
 <header class="page-header">
   <div class="header-left">
     <h1>Apartament z antresolą i tarasem – Katowice</h1>
-    <p>ul. Meteorologów 21, Katowice</p>
-      <div class="price-badge">Cena za m²: <strong>10 499 zł</strong></div>
+   <div class="header-subinfo">
+  <p class="address">ul. Meteorologów 21, Katowice</p>
+  <div class="price-badge">💰 Cena za m²: <strong>10 499 zł</strong></div>
+</div>
   </div>
   <div class="header-icons">
     <button onclick="sharePage()" class="icon-button" title="Udostępnij">
