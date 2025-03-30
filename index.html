@@ -1,26 +1,131 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Redirecting...</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nowoczesny apartament z tarasem – Katowice</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-V1ZR2QKW9E"></script>
-  <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-V1ZR2QKW9E'); // Google Analytics Tracking ID
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f5f7fa;
+      color: #333;
+    }
 
-      // Delay redirect to ensure tracking
-      setTimeout(function() {
-          window.location.href = "https://www.otodom.pl/pl/oferta/apartament-111m2-z-antresola-taras-66m-balkon-6m-ID4wHmv.html";
-      }, 2000);
-  </script>
+    header {
+      background-color: #ffffff;
+      padding: 40px 20px 20px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      color: #1a202c;
+    }
+
+    .section {
+      max-width: 1000px;
+      margin: 40px auto;
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+    }
+
+    .section h2 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: #2d3748;
+    }
+
+    .section p {
+      margin-bottom: 20px;
+      color: #4a5568;
+      line-height: 1.6;
+    }
+
+    iframe {
+      width: 100%;
+      height: 500px;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .contact-button {
+      display: inline-block;
+      padding: 15px 25px;
+      background-color: #3182ce;
+      color: white;
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 1rem;
+      margin-top: 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    .contact-button:hover {
+      background-color: #2b6cb0;
+    }
+
+    @media (max-width: 768px) {
+      iframe {
+        height: 300px;
+      }
+
+      .section {
+        margin: 20px;
+        padding: 20px;
+      }
+
+      header h1 {
+        font-size: 1.5rem;
+      }
+
+      .contact-button {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 <body>
-  <p>Redirecting... If you are not redirected automatically, follow this 
-     <a href="https://www.otodom.pl/pl/oferta/apartament-111m2-z-najwiekszym-tarasem-66m-ID4rlgD">link to the offer on OTODOM</a>.</p>
+
+  <header>
+    <h1>Nowoczesny apartament z antresolą i tarasem – Katowice</h1>
+  </header>
+
+  <div class="section">
+    <h2>Oferta na OTODOM</h2>
+    <p>Zapraszamy do zapoznania się z pełną ofertą mieszkania na portalu OTODOM:</p>
+    <iframe src="https://www.otodom.pl/pl/oferta/apartament-111m2-z-antresola-taras-66m-balkon-6m-ID4wHmv.html" allowfullscreen></iframe>
+  </div>
+
+  <div class="section">
+    <h2>Wirtualny spacer 360°</h2>
+    <p>Odwiedź mieszkanie bez wychodzenia z domu dzięki zdjęciom sferycznym:</p>
+    <iframe src="https://momento360.com/e/u/1ae79217ac1443da8c073d1febd2479f?utm_campaign=embed&utm_source=other&heading=131.86&pitch=-10.69&field-of-view=75&size=medium&display-plan=true" allowfullscreen></iframe>
+  </div>
+
+  <div class="section">
+    <h2>Lokalizacja – ul. Meteorologów 21, Katowice</h2>
+    <p>Sprawdź dokładne położenie mieszkania:</p>
+    <iframe src="https://www.google.com/maps?q=Meteorolog%C3%B3w+21,+Katowice&output=embed"></iframe>
+  </div>
+
+  <div class="section" style="text-align: center;">
+    <h2>Skontaktuj się</h2>
+    <p>Masz pytania? Zadzwoń bezpośrednio do właściciela:</p>
+    <a href="tel:+48727652669" class="contact-button">📞 +48 727 652 669</a>
+  </div>
+
 </body>
 </html>
