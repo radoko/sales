@@ -181,30 +181,73 @@
   transform: translateY(-3px);
 }
 
-    .header-actions {
-  margin-top: 20px;
+/* Nagłówek strony */
+.page-header {
+  background-color: #ffffff;
+  padding: 30px 20px 20px;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
   flex-wrap: wrap;
-  justify-content: center;
+  gap: 10px;
+}
+
+/* Lewa strona nagłówka */
+.header-left h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: #1a202c;
+}
+
+.header-left p {
+  margin: 5px 0 0;
+  color: #4a5568;
+  font-size: 1rem;
+}
+
+/* Ikony po prawej */
+.header-icons {
+  display: flex;
   gap: 12px;
 }
 
-.action-button {
-  background-color: #e2e8f0;
-  color: #2d3748;
+.icon-button {
+  background: none;
   border: none;
-  border-radius: 10px;
-  padding: 10px 16px;
-  font-size: 0.95rem;
-  font-weight: 500;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-  text-decoration: none;
+  padding: 8px;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.action-button:hover {
-  background-color: #cbd5e0;
+.icon-button:hover {
+  background-color: #edf2f7;
 }
+
+/* Ikony SVG */
+.icon-button svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+  fill: #4a5568;
+}
+
+/* Responsywność */
+@media (max-width: 600px) {
+  .page-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-icons {
+    justify-content: flex-start;
+  }
+}
+
 
 
   </style>
