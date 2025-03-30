@@ -5,6 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title> Apartament z tarasem – Katowice</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <script>
+  function sharePage() {
+    if (navigator.share) {
+      navigator.share({
+        title: document.title,
+        text: 'Zobacz wyjątkowy apartament w Katowicach!',
+        url: window.location.href
+      }).catch(console.error);
+    } else {
+      alert('Twoja przeglądarka nie obsługuje natywnego udostępniania.');
+    }
+  }
+
+  function bookmarkPage() {
+    const url = window.location.href;
+    const title = document.title;
+
+    if (window.sidebar && window.sidebar.addPanel) {
+      // Firefox <=22
+      window.sidebar.addPanel(title, url, '');
+    } else if (window.external && ('AddFavorite' in window.external)) {
+      // Internet Explorer
+      window.external.AddFavorite(url, title);
+    } else {
+      // Nowoczesne przeglądarki – tylko podpowiedź
+      prompt('Aby dodać stronę do ulubionych, naciśnij Ctrl + D (Windows) lub ⌘ + D (Mac)', url);
+    }
+  }
+</script>
+
   <style>
     * {
       box-sizing: border-box;
@@ -154,10 +184,18 @@
   </style>
 </head>
 <body>
+<header>
+  <h1>Apartament z antresolą i tarasem – Katowice</h1>
+  <p style="margin-top: 10px; color: #4a5568; font-size: 1rem;">
+    ul. Meteorologów 21, Katowice
+  </p>
 
-  <header>
-    <h1>Apartament z antresolą i tarasem – Katowice</h1>
-  </header>
+  <div style="margin-top: 20px; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
+    <button onclick="sharePage()" class="contact-button" style="background-color:#4caf50;">📤 Udostępnij</button>
+    <button onclick="bookmarkPage()" class="contact-button" style="background-color:#f59e0b;">⭐ Dodaj do ulubionych</button>
+    <a href="tel:+48727652669" class="contact-button" style="background-color:#e53e3e;">📞 Zadzwoń: +48 727 652 669</a>
+  </div>
+</header>
 
 <div class="section otodom-wrapper">
   <div class="details-block">
